@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Culinaire Reizen</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+        <a class="navbar-brand" href="index.html">Culinaire Reizen</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="overzicht.html">Overzicht</a>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Keukens
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="italiaanse.html">Italiaanse Keuken</a>
+                            <a class="dropdown-item" href="japanse.html">Japanse Keuken</a>
+                            <a class="dropdown-item" href="indiaase.html">Indiase Keuken</a>
+                            <a class="dropdown-item" href="mexicaanse.html">Mexicaanse Keuken</a>
+                            <a class="dropdown-item" href="thaise.html">Thaise Keuken</a>
+                            <a class="dropdown-item" href="franse.html">Franse Keuken</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    
+</nav>
+
+<div class="container mt-5">
+    <h1>Contacteer Ons</h1>
+    <p>
+        Heb je vragen, suggesties of wil je meer informatie over een specifieke keuken? Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met je op.
+    </p>
+    <form>
+        <!-- Contactformulier voor 'admin' -->
+        <div class="form-group">
+            <label for="adminName">Naam (Admin):</label>
+            <input type="text" class="form-control" id="adminName" placeholder="Jouw Naam">
+        </div>
+        <div class="form-group">
+            <label for="adminEmail">Email (Admin):</label>
+            <input type="email" class="form-control" id="adminEmail" placeholder="jouw@email.com">
+        </div>
+
+        <!-- Contactformulier voor 'webdesigner' -->
+        <div class="form-group">
+            <label for="webdesignerName">Naam (Webdesigner):</label>
+            <input type="text" class="form-control" id="webdesignerName" placeholder="Jouw Naam">
+        </div>
+        <div class="form-group">
+            <label for="webdesignerEmail">Email (Webdesigner):</label>
+            <input type="email" class="form-control" id="webdesignerEmail" placeholder="webdesigner@email.com">
+        </div>
+
+        <!-- Kaart met markering -->
+        <div id="map" style="height: 300px;"></div>
+
+        <button type="submit" class="btn btn-primary mt-3">Verzenden</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
