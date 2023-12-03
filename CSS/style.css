@@ -16,4 +16,18 @@ html, body {
   .koffiebruin{
     color: #ca8446;
   }
-  
+
+  .navbar {
+    margin-bottom: 20px;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Plaats de zoekbalk aan het einde van de navigatiebalk */
+}
+.search-input {
+    margin-right: 10px;
+}
+.search-btn {
+    padding: 8px 15px;
+}
