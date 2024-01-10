@@ -18,6 +18,18 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- CSS styling for map container -->
+    <style>
+        #map {
+            height: 500px;
+        } 
+        .socials i {
+      color: black; /* Zwart maken */
+    }
+    </style>
 </head>
 <body>
     
@@ -113,10 +125,37 @@
             
         </ul>
     </div>
+    <div id="map"></div>
+
+<script>
+    
+    var map = L.map('map').setView([0, 0], 2); // Centered at (0, 0), zoom level 2
+
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    //  alle landen aanduiden
+    var countries = [
+        { name: 'France', coordinates: [46.6035, 1.888334] },
+        { name: 'India', coordinates: [20.5937, 78.9629] },
+        { name: 'Italy', coordinates: [41.8719, 12.5674] },
+        { name: 'Japan', coordinates: [36.2048, 138.2529] },
+        { name: 'Mexico', coordinates: [23.6345, -102.5528] },
+        { name: 'Thailand', coordinates: [15.8700, 100.9925] }
+    ];
+
+    // Add markers for each country
+    countries.forEach(function(country) {
+        L.marker(country.coordinates).addTo(map)
+            .bindPopup(country.name);
+    });
+</script>
 
 <!-- contact blokje-->
 <div class="row">
-    <aside class="col-md-3 border-start ps-5">
+    <aside class="col-md-3  ps-5 contact-aside mx-auto">
         <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
         <p>Culinaire reizen <br>
           email <a href="mailto:mail@ap.be">mail@ap.be</a><br>

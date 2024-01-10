@@ -15,6 +15,17 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- eigen geschreven css voor jouw html-bestand -->
   <link href="./css/style.css" rel="stylesheet">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <!-- CSS styling for map container -->
+  <style>
+    #map {
+        height: 500px;
+    }
+</style>
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -71,7 +82,7 @@
 
 
             <figure>
-                <img src="./afbeeldingen/franse eten.jpg" alt="frans eten" width="250" height="200" mt-3 mb-3>
+                <img src="../afbeeldingen/franse eten.jpg" alt="frans eten" width="250" height="200" mt-3 mb-3>
                 <figcaption><em>franse keuken</em></figcaption>
             </figure>
 
@@ -104,10 +115,24 @@
                 </ul>
             
     </div>
-   
+    <div id="map"></div>
+    <script>
+      // Initialize Leaflet map centered on France
+      var map = L.map('map').setView([46.6035, 1.888334], 5);
+  
+      // Add a tile layer (OpenStreetMap)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+  
+      // Add a marker for France
+      L.marker([46.6035, 1.888334]).addTo(map)
+          .bindPopup('France');
+  </script>
+
     <!-- contact blokje-->
 <div class="row">
-    <aside class="col-md-3 border-start ps-5">
+    <aside class="col-md-3 ps-5 contact-aside mx-auto">
         <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
         <p>Culinaire reizen <br>
           email <a href="mailto:mail@ap.be">mail@ap.be</a><br>
