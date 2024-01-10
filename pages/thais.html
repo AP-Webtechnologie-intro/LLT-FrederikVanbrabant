@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
+  <!-- Required meta tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,148 +16,178 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- eigen geschreven css voor jouw html-bestand -->
   <link href="./css/style.css" rel="stylesheet">
-   <!-- Leaflet CSS -->
-   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
   <!-- Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <style>
     #map {
-        height: 500px;
+      height: 500px;
     }
+
     .socials i {
-      color: black; /* Zwart maken */
+      color: black;
+      /* Zwart maken */
     }
-</style>
+  </style>
 
 </head>
+
 <body>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<!--Naviagatiebalk-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Culinaire Reizen</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-             <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="overzicht.html">Overzicht</a>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Keukens
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="italiaans.html">Italiaanse Keuken</a>
-                            <a class="dropdown-item" href="japans.html">Japanse Keuken</a>
-                            <a class="dropdown-item" href="indiase.html">Indiase Keuken</a>
-                            <a class="dropdown-item" href="mexicaans.html">Mexicaanse Keuken</a>
-                            <a class="dropdown-item" href="thais.html">Thaise Keuken</a>
-                            <a class="dropdown-item" href="frans.html">Franse Keuken</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-            <div class="search-container">
-                <form class="d-flex" role="search">
-                <input type="text" class="form-control search-input" placeholder="Zoek...">
-                <button class="btn btn-outline-light search-btn">Zoek</button>
-            </form>
+  <!--Naviagatiebalk-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Culinaire Reizen</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="overzicht.html">Overzicht</a>
+        </li>
+        <li class="nav-item">
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Keukens
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="italiaans.html">Italiaanse Keuken</a>
+              <a class="dropdown-item" href="japans.html">Japanse Keuken</a>
+              <a class="dropdown-item" href="indiase.html">Indiase Keuken</a>
+              <a class="dropdown-item" href="mexicaans.html">Mexicaanse Keuken</a>
+              <a class="dropdown-item" href="thais.html">Thaise Keuken</a>
+              <a class="dropdown-item" href="frans.html">Franse Keuken</a>
             </div>
-         </div>
-         </nav>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
 
-            <div class="container mt-3 mb-3">
-            <h1>Thaise keuken</h1>
-
-            <figure>
-                <img src="../afbeeldingen/Thaise keuken.jpg" alt="Thaise keuken" width="250" height="200" >
-                <figcaption><em> Thaise keuken</em></figcaption>
-            </figure>
-
-
-            <H2>Geschiedenis</H2>
-            <p>
-                De Thaise keuken is een harmonieuze combinatie van kruiden en smaken die teruggaat tot eeuwenoude tradities en invloeden uit verschillende Aziatische culturen. De balans tussen zoet, zuur, zout en pittig vormt de kern van elke Thaise maaltijd.
-            </p>    
-            <h2>Unieke ingredienten</h2>
-            <p>
-                Thaise gerechten worden versterkt door het gebruik van ingrediënten zoals kokosmelk, citroengras, Thaise basilicum, galangal, vissaus en tamarinde. De verscheidenheid aan kruiden en specerijen draagt bij aan de unieke en levendige smaak van Thais eten.
-            </p>
-                <h2>Kooktechnieken:</h2>
-
-            <p>
-                De Japanse keuken staat bekend om zijn precisie en kunstzinnigheid. Sushi-chefs besteden jaren aan het perfectioneren van hun vaardigheden, terwijl ramen-koks bouillon maken met dezelfde toewijding. Daarnaast wordt er veel nadruk gelegd op snijtechnieken en presentatie.            </p>
-    
-            <h2>Tips voor thuischefs</h2>
-            <p>
-                Experimenteer met verschillende combinaties van kruiden en specerijen, leer de kunst van het bereiden van een perfecte Thaise currypasta, en ontdek de veelzijdigheid van kokosmelk in zowel hartige als zoete gerechten.
-            </p>
-                <h2>Populaire Thaise gerechten</h2>
-                <ul>
-                    <li>Tom Yum Soep</li>
-                    <li>Pad Thai</li>
-                    <li>Groene Curry</li>
-                </ul>
+      </ul>
     </div>
-    <div id="map"></div>
+    <div class="search-container">
+      <form class="d-flex" role="search">
+        <input type="text" class="form-control search-input" placeholder="Zoek...">
+        <button class="btn btn-outline-light search-btn">Zoek</button>
+      </form>
 
-    <script>
-        // Initialize Leaflet map centered on Thailand
-        var map = L.map('map').setView([15.8700, 100.9925], 5);
+    </div>
+  </nav>
+
+  <div class="container mt-3 mb-3">
+    <h1>Thaise keuken</h1>
+
+    <figure>
+      <img src="../afbeeldingen/Thaise keuken.jpg" alt="Thaise keuken" width="250" height="200">
+      <figcaption><em> Thaise keuken</em></figcaption>
+    </figure>
+
+
+    <H2>Geschiedenis</H2>
+    <p>
+      De Thaise keuken is een harmonieuze combinatie van kruiden en smaken die teruggaat tot eeuwenoude tradities en
+      invloeden uit verschillende Aziatische culturen. De balans tussen zoet, zuur, zout en pittig vormt de kern van
+      elke Thaise maaltijd.
+    </p>
+    <h2>Unieke ingredienten</h2>
+    <p>
+      Thaise gerechten worden versterkt door het gebruik van ingrediënten zoals kokosmelk, citroengras, Thaise
+      basilicum, galangal, vissaus en tamarinde. De verscheidenheid aan kruiden en specerijen draagt bij aan de unieke
+      en levendige smaak van Thais eten.
+    </p>
+    <h2>Kooktechnieken:</h2>
+
+    <p>
+      De Japanse keuken staat bekend om zijn precisie en kunstzinnigheid. Sushi-chefs besteden jaren aan het
+      perfectioneren van hun vaardigheden, terwijl ramen-koks bouillon maken met dezelfde toewijding. Daarnaast wordt er
+      veel nadruk gelegd op snijtechnieken en presentatie. </p>
+
+    <h2>Tips voor thuischefs</h2>
+    <p>
+      Experimenteer met verschillende combinaties van kruiden en specerijen, leer de kunst van het bereiden van een
+      perfecte Thaise currypasta, en ontdek de veelzijdigheid van kokosmelk in zowel hartige als zoete gerechten.
+    </p>
+    <h2>Populaire Thaise gerechten</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Gerecht</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tom Yum Soep</td>
+        </tr>
+        <tr>
+          <td>Pad Thai</td>
+        </tr>
+        <tr>
+          <td>Groene Curry
+      </tbody>
+      <caption><em>populaire gerechten</em></caption>
+    </table>
     
-        // Add a tile layer (OpenStreetMap)
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
+  </div>
+  <!--leaflet-->
+  <div id="map"></div>
+
+  <script>
     
-        // Add a marker for Thailand
-        L.marker([15.8700, 100.9925]).addTo(map)
-            .bindPopup('Thailand');
-    </script> 
-    <!-- contact blokje-->
-<div class="row">
+    var map = L.map('map').setView([15.8700, 100.9925], 5);
+
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    
+    L.marker([15.8700, 100.9925]).addTo(map)
+      .bindPopup('Thailand');
+  </script>
+  <!-- contact blokje-->
+  <div class="row">
     <aside class="col-md-3  ps-5 contact-aside mx-auto">
-        <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
-        <p>Culinaire reizen <br>
-          email <a href="mailto:mail@ap.be">mail@ap.be</a><br>
-          phone +32 123 / 45 67 89</p>
-        <ul class="list-inline socials">
-          <li class="list-inline-item">
-            <a href="https://www.youtube.com" target="_blank">
-              <i class="bi bi-youtube  fs-3"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.instagram.com" target="_blank">
-              <i class="bi bi-instagram fs-3"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.facebook.com" target="_blank">
-              <i class="bi bi-facebook fs-3 "></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://twitter.com/" target="_blank">
-              <i class="bi bi-twitter  fs-3"></i>
-            </a>
-          </li>
-        </ul>
+      <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
+      <p>Culinaire reizen <br>
+        email <a href="mailto:mail@ap.be">mail@ap.be</a><br>
+        phone +32 123 / 45 67 89</p>
+      <ul class="list-inline socials">
+        <li class="list-inline-item">
+          <a href="https://www.youtube.com" target="_blank">
+            <i class="bi bi-youtube  fs-3"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="bi bi-facebook fs-3 "></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://twitter.com/" target="_blank">
+            <i class="bi bi-twitter  fs-3"></i>
+          </a>
+        </li>
+      </ul>
     </aside>
-</div>
+  </div>
 
 
 </body>
+
 </html>

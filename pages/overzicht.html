@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Culinaire Reizen</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-  <!-- Bootstrap CSS icons: https://icons.getbootstrap.com/#usage -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-  <!-- JavaScript: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- eigen geschreven css voor jouw html-bestand -->
-  <link href="./css/style.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinaire Reizen</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <!-- Bootstrap CSS icons: https://icons.getbootstrap.com/#usage -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- JavaScript: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- eigen geschreven css voor jouw html-bestand -->
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -25,18 +26,22 @@
     <style>
         #map {
             height: 500px;
-        } 
+        }
+
         .socials i {
-      color: black; /* Zwart maken */
-    }
+            color: black;
+            /* Zwart maken */
+        }
     </style>
 </head>
+
 <body>
-    
-<!--NAv bar-->
+
+    <!--NAv bar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">Culinaire Reizen</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -49,7 +54,8 @@
                 </li>
                 <li class="nav-item">
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Keukens
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -66,123 +72,156 @@
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
             </ul>
-            <div class="search-container">
-                <form class="d-flex" role="search">
+        </div>
+        <div class="search-container">
+            <form class="d-flex" role="search">
                 <input type="text" class="form-control search-input" placeholder="Zoek...">
                 <button class="btn btn-outline-light search-btn">Zoek</button>
             </form>
-            </div>
+
         </div>
     </nav>
 
     <!-- overzicht van de kukene met titels die linken naar de keuken htmls-->
     <div class="container mt-3 mb-3">
         <h1>Keuken Overzicht</h1>
-    
+
         <ul>
             <li>
                 <h2> <a class="nav-link" href="pages/Italiaans.html">Italiaanse keuken </a></h2>
                 <p>
-                    Ontdek de magie van de Italiaanse keuken, een culinaire reis door de smaken van de regio's. Van de romige risotto van het noorden tot de pittige zeevruchten van het zuiden, elke hap brengt je dichter bij de warme zon en de rijke tradities van Italië. Proef de verfijning van verse basilicum en olijfolie, voel de knapperige korst van een perfect gebakken pizza en laat je verleiden door de zoete verleiding van een klassieke tiramisu. Leer over de Italiaanse eetcultuur, waar eten een heilige kunst is die families samenbrengt en de basis vormt van elk feestmaal.
+                    Ontdek de magie van de Italiaanse keuken, een culinaire reis door de smaken van de regio's. Van de
+                    romige risotto van het noorden tot de pittige zeevruchten van het zuiden, elke hap brengt je dichter
+                    bij de warme zon en de rijke tradities van Italië. Proef de verfijning van verse basilicum en
+                    olijfolie, voel de knapperige korst van een perfect gebakken pizza en laat je verleiden door de
+                    zoete verleiding van een klassieke tiramisu. Leer over de Italiaanse eetcultuur, waar eten een
+                    heilige kunst is die families samenbrengt en de basis vormt van elk feestmaal.
                 </p>
             </li>
-    
+
             <li>
                 <h2><a class="nav-link" href="pages/Japans.html">Japanse Keuken </a></h2>
                 <p>
-                    Stap in de wereld van de Japanse keuken, waar esthetiek en smaak samenkomen in perfecte harmonie. Van de verfijnde kunst van het snijden van sashimi tot de subtiele smaken van een kom miso-soep, elke maaltijd is een eerbetoon aan eenvoud en vakmanschap. Leer over de eeuwenoude culinaire tradities die worden gekenmerkt door respect voor ingrediënten en de kunst van het presenteren. Ontdek de diepgaande betekenis achter gerechten zoals sushi, die niet alleen voeding bieden, maar ook een weerspiegeling zijn van de Japanse cultuur en filosofie.
+                    Stap in de wereld van de Japanse keuken, waar esthetiek en smaak samenkomen in perfecte harmonie.
+                    Van de verfijnde kunst van het snijden van sashimi tot de subtiele smaken van een kom miso-soep,
+                    elke maaltijd is een eerbetoon aan eenvoud en vakmanschap. Leer over de eeuwenoude culinaire
+                    tradities die worden gekenmerkt door respect voor ingrediënten en de kunst van het presenteren.
+                    Ontdek de diepgaande betekenis achter gerechten zoals sushi, die niet alleen voeding bieden, maar
+                    ook een weerspiegeling zijn van de Japanse cultuur en filosofie.
                 </p>
             </li>
-    
+
             <li>
                 <h2><a class="nav-link" href="pages/Indiase.html">Indiase Keuken </a></h2>
                 <p>
-                    Ontdek de veelzijdigheid van de Indiase keuken, een feest van smaken en specerijen die alle zintuigen prikkelen. Van de rijke romigheid van boterkip tot de pittige sensatie van vindaloo, elke maaltijd vertelt een verhaal van de levendige diversiteit van India. Verdiep je in de wereld van masala's en chutneys, en ontdek de kunst van het mengen van kruiden die generaties lang is doorgegeven. Leer over de betekenis van voedsel in de Indiase cultuur, waar elke hap een viering is van traditie, gastvrijheid en liefde voor lekker eten.
+                    Ontdek de veelzijdigheid van de Indiase keuken, een feest van smaken en specerijen die alle
+                    zintuigen prikkelen. Van de rijke romigheid van boterkip tot de pittige sensatie van vindaloo, elke
+                    maaltijd vertelt een verhaal van de levendige diversiteit van India. Verdiep je in de wereld van
+                    masala's en chutneys, en ontdek de kunst van het mengen van kruiden die generaties lang is
+                    doorgegeven. Leer over de betekenis van voedsel in de Indiase cultuur, waar elke hap een viering is
+                    van traditie, gastvrijheid en liefde voor lekker eten.
                 </p>
             </li>
-    
+
             <li>
                 <h2><a class="nav-link" href="pages/Mexicaans.html">Mexicaanse Keuken </a></h2>
                 <p>
-                    Treed binnen in de levendige wereld van de Mexicaanse keuken, waar elke maaltijd een kleurrijke viering is van smaken en tradities. Proef de rijke aroma's van een authentieke guacamole, geniet van de intense warmte van een kruidige salsa en ontdek de veelzijdigheid van maïs in gerechten zoals tamales en tortilla's. Leer over de rijke culturele geschiedenis die ten grondslag ligt aan de Mexicaanse keuken, met invloeden van de oude Azteken en de Spaanse kolonisten die hebben bijgedragen aan de unieke en levendige smaken van Mexico.
+                    Treed binnen in de levendige wereld van de Mexicaanse keuken, waar elke maaltijd een kleurrijke
+                    viering is van smaken en tradities. Proef de rijke aroma's van een authentieke guacamole, geniet van
+                    de intense warmte van een kruidige salsa en ontdek de veelzijdigheid van maïs in gerechten zoals
+                    tamales en tortilla's. Leer over de rijke culturele geschiedenis die ten grondslag ligt aan de
+                    Mexicaanse keuken, met invloeden van de oude Azteken en de Spaanse kolonisten die hebben bijgedragen
+                    aan de unieke en levendige smaken van Mexico.
                 </p>
             </li>
-    
+
             <li>
                 <h2><a class="nav-link" href="pages/Thais.html">Thaise Keuken </a></h2>
                 <p>
-                    Laat je betoveren door de explosie van smaken en texturen die de Thaise keuken te bieden heeft, een evenwichtige dans van zoet, zuur, zout en pittig. Van de verfrissende kaffir limoenbladeren tot de intense hitte van Thaise chili's, elke hap brengt je naar de bruisende straten van Bangkok en de weelderige markten van Chiang Mai. Ontdek de kunst van het balanceren van kruiden en specerijen in gerechten zoals Tom Yum soep, Pad Kra Pao en Groene Curry, en leer over de diepgewortelde culinaire tradities die de Thaise keuken zo geliefd maken over de hele wereld.
+                    Laat je betoveren door de explosie van smaken en texturen die de Thaise keuken te bieden heeft, een
+                    evenwichtige dans van zoet, zuur, zout en pittig. Van de verfrissende kaffir limoenbladeren tot de
+                    intense hitte van Thaise chili's, elke hap brengt je naar de bruisende straten van Bangkok en de
+                    weelderige markten van Chiang Mai. Ontdek de kunst van het balanceren van kruiden en specerijen in
+                    gerechten zoals Tom Yum soep, Pad Kra Pao en Groene Curry, en leer over de diepgewortelde culinaire
+                    tradities die de Thaise keuken zo geliefd maken over de hele wereld.
                 </p>
             </li>
-    
+
             <li>
                 <h2><a class="nav-link" href="pages/Frans.html">Franse Keuken </a></h2>
                 <p>
-                    Omarm de verfijning en elegantie van de Franse keuken, een symfonie van smaken en tradities die de zintuigen strelen. Geniet van de rijke smaken van een coq au vin, proef de romigheid van een perfect bereide béarnaisesaus en laat je betoveren door de verfijnde zoetheid van een crème brûlée. Leer over de gastronomische erfenis van Frankrijk, waar elke maaltijd een kunstwerk op zich is, doordrenkt van de passie en toewijding van generaties Franse koks. Ontdek de betekenis van "joie de vivre" in elke hap, waar eten niet alleen voeding is, maar een manier van leven.
+                    Omarm de verfijning en elegantie van de Franse keuken, een symfonie van smaken en tradities die de
+                    zintuigen strelen. Geniet van de rijke smaken van een coq au vin, proef de romigheid van een perfect
+                    bereide béarnaisesaus en laat je betoveren door de verfijnde zoetheid van een crème brûlée. Leer
+                    over de gastronomische erfenis van Frankrijk, waar elke maaltijd een kunstwerk op zich is,
+                    doordrenkt van de passie en toewijding van generaties Franse koks. Ontdek de betekenis van "joie de
+                    vivre" in elke hap, waar eten niet alleen voeding is, maar een manier van leven.
                 </p>
             </li>
-            
-            
+
+
         </ul>
     </div>
+    <!--leaflet-->
     <div id="map"></div>
 
-<script>
-    
-    var map = L.map('map').setView([0, 0], 2); // Centered at (0, 0), zoom level 2
+    <script>
 
-    
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+        var map = L.map('map').setView([0, 0], 2); 
 
-    //  alle landen aanduiden
-    var countries = [
-        { name: 'France', coordinates: [46.6035, 1.888334] },
-        { name: 'India', coordinates: [20.5937, 78.9629] },
-        { name: 'Italy', coordinates: [41.8719, 12.5674] },
-        { name: 'Japan', coordinates: [36.2048, 138.2529] },
-        { name: 'Mexico', coordinates: [23.6345, -102.5528] },
-        { name: 'Thailand', coordinates: [15.8700, 100.9925] }
-    ];
 
-    // Add markers for each country
-    countries.forEach(function(country) {
-        L.marker(country.coordinates).addTo(map)
-            .bindPopup(country.name);
-    });
-</script>
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
 
-<!-- contact blokje-->
-<div class="row">
-    <aside class="col-md-3  ps-5 contact-aside mx-auto">
-        <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
-        <p>Culinaire reizen <br>
-          email <a href="mailto:mail@ap.be">mail@ap.be</a><br>
-          phone +32 123 / 45 67 89</p>
-        <ul class="list-inline socials">
-          <li class="list-inline-item">
-            <a href="https://www.youtube.com" target="_blank">
-              <i class="bi bi-youtube  fs-3"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.instagram.com" target="_blank">
-              <i class="bi bi-instagram fs-3"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.facebook.com" target="_blank">
-              <i class="bi bi-facebook fs-3 "></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://twitter.com/" target="_blank">
-              <i class="bi bi-twitter  fs-3"></i>
-            </a>
-          </li>
-        </ul>
-    </aside>
-</div>
+        
+        var countries = [
+            { name: 'France', coordinates: [46.6035, 1.888334] },
+            { name: 'India', coordinates: [20.5937, 78.9629] },
+            { name: 'Italy', coordinates: [41.8719, 12.5674] },
+            { name: 'Japan', coordinates: [36.2048, 138.2529] },
+            { name: 'Mexico', coordinates: [23.6345, -102.5528] },
+            { name: 'Thailand', coordinates: [15.8700, 100.9925] }
+        ];
+
+        
+        countries.forEach(function (country) {
+            L.marker(country.coordinates).addTo(map)
+                .bindPopup(country.name);
+        });
+    </script>
+
+    <!-- contact blokje-->
+    <div class="row">
+        <aside class="col-md-3  ps-5 contact-aside mx-auto">
+            <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
+            <p>Culinaire reizen <br>
+                email <a href="mailto:mail@ap.be">mail@ap.be</a><br>
+                phone +32 123 / 45 67 89</p>
+            <ul class="list-inline socials">
+                <li class="list-inline-item">
+                    <a href="https://www.youtube.com" target="_blank">
+                        <i class="bi bi-youtube  fs-3"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="bi bi-instagram fs-3"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="bi bi-facebook fs-3 "></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="bi bi-twitter  fs-3"></i>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </div>
 </body>
+
 </html>

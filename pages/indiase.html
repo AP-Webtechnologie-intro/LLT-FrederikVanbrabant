@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
+  <!-- Required meta tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,150 +18,178 @@
   <link href="./css/style.css" rel="stylesheet">
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    
+
   <!-- Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <!-- CSS styling for map container -->
   <style>
     #map {
-        height: 500px;
+      height: 500px;
 
     }
+
     .socials i {
-      color: black; /* Zwart maken */
+      color: black;
+      /* Zwart maken */
     }
-</style>
+  </style>
 </head>
+
 <body>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<!--Naviagatiebalk-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Culinaire Reizen</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-             <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="overzicht.html">Overzicht</a>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Keukens
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="italiaans.html">Italiaanse Keuken</a>
-                            <a class="dropdown-item" href="japans.html">Japanse Keuken</a>
-                            <a class="dropdown-item" href="indiase.html">Indiase Keuken</a>
-                            <a class="dropdown-item" href="mexicaans.html">Mexicaanse Keuken</a>
-                            <a class="dropdown-item" href="thais.html">Thaise Keuken</a>
-                            <a class="dropdown-item" href="frans.html">Franse Keuken</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
+  <!--Naviagatiebalk-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Culinaire Reizen</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="overzicht.html">Overzicht</a>
+        </li>
+        <li class="nav-item">
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Keukens
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="italiaans.html">Italiaanse Keuken</a>
+              <a class="dropdown-item" href="japans.html">Japanse Keuken</a>
+              <a class="dropdown-item" href="indiase.html">Indiase Keuken</a>
+              <a class="dropdown-item" href="mexicaans.html">Mexicaanse Keuken</a>
+              <a class="dropdown-item" href="thais.html">Thaise Keuken</a>
+              <a class="dropdown-item" href="frans.html">Franse Keuken</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
 
-         </div>
-         <div class="search-container">
-            <form class="d-flex" role="search">
-            <input type="text" class="form-control search-input" placeholder="Zoek...">
-            <button class="btn btn-outline-light search-btn">Zoek</button>
-        </form>
-        </div>
-         </nav>
-
-            <div class="container mt-3 mb-3">
-            <h1>Indiase keuken</h1>
-         
-
-            <figure>
-                <img src="../afbeeldingen/Indiase keuken.jpg" alt="Indiaans eten" width="250" height="200" mt-3 mb-3>
-                <figcaption><em>Indiase keuken</em></figcaption>
-            </figure>
-
-
-
-            <H2>Geschiedenis</H2>
-
-            <p>
-                De Indiase keuken is een levendige viering van diversiteit en culturele rijkdom. Geworteld in eeuwenoude tradities en beïnvloed door verschillende invasies en handelsbetrekkingen, heeft de Indiase keuken een rijkdom aan smaken en kruiden die wereldwijd geliefd zijn.    
-            <h2>Unieke ingredienten</h2>
-            <p>
-                Specerijen spelen een cruciale rol in de Indiase keuken, van kardemom, kaneel, komijn tot kurkuma en rode chili's. Daarnaast zijn linzen, rijst, tarwe, aardappelen en een scala aan groenten en fruit ook prominente ingrediënten in verschillende Indiase gerechten.
-            </p>
-                <h2>Kooktechnieken:</h2>
-
-            <p>
-                Het gebruik van specerijen, langzaam koken en het mengen van zoete, zure, pittige en hartige smaken zijn kenmerkend voor de Indiase kookstijl. Gerechten worden vaak bereid met behulp van methoden zoals braden, stomen, frituren en bakken.
-            </p>    
-            <h2>Tips voor thuischefs</h2>
-            <p>
-                Verken de verscheidenheid aan specerijen en hun combinaties, leer de kunst van het maken van basisingrediënten zoals currypasta's en chutneys, en experimenteer met het maken van authentieke naanbrood en biryanischotels.
-            </p>
-                <h2>Populaire Indiase gerechten</h2>
-                <ul>
-                    <li>Boterkip (Chicken Makhani)</li>
-                    <li>Paneer Tikka Masala</li>
-                    <li>Samosa</li>
-                </ul>
     </div>
-    <div id="map"></div>
+    <div class="search-container">
+      <form class="d-flex" role="search">
+        <input type="text" class="form-control search-input" placeholder="Zoek...">
+        <button class="btn btn-outline-light search-btn">Zoek</button>
+      </form>
+    </div>
+  </nav>
 
-    <script>
-        // Initialize Leaflet map centered on India
-        var map = L.map('map').setView([20.5937, 78.9629], 5);
-    
-        // Add a tile layer (OpenStreetMap)
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-    
-        // Add a marker for India
-        L.marker([20.5937, 78.9629]).addTo(map)
-            .bindPopup('India');
-    </script>
+  <div class="container mt-3 mb-3">
+    <h1>Indiase keuken</h1>
 
-    <!-- contact blokje-->
-<div class="row">
+
+    <figure>
+      <img src="../afbeeldingen/Indiase keuken.jpg" alt="Indiaans eten" width="250" height="200" mt-3 mb-3>
+      <figcaption><em>Indiase keuken</em></figcaption>
+    </figure>
+
+
+
+    <H2>Geschiedenis</H2>
+
+    <p>
+      De Indiase keuken is een levendige viering van diversiteit en culturele rijkdom. Geworteld in eeuwenoude tradities
+      en beïnvloed door verschillende invasies en handelsbetrekkingen, heeft de Indiase keuken een rijkdom aan smaken en
+      kruiden die wereldwijd geliefd zijn.
+    <h2>Unieke ingredienten</h2>
+    <p>
+      Specerijen spelen een cruciale rol in de Indiase keuken, van kardemom, kaneel, komijn tot kurkuma en rode chili's.
+      Daarnaast zijn linzen, rijst, tarwe, aardappelen en een scala aan groenten en fruit ook prominente ingrediënten in
+      verschillende Indiase gerechten.
+    </p>
+    <h2>Kooktechnieken:</h2>
+
+    <p>
+      Het gebruik van specerijen, langzaam koken en het mengen van zoete, zure, pittige en hartige smaken zijn
+      kenmerkend voor de Indiase kookstijl. Gerechten worden vaak bereid met behulp van methoden zoals braden, stomen,
+      frituren en bakken.
+    </p>
+    <h2>Tips voor thuischefs</h2>
+    <p>
+      Verken de verscheidenheid aan specerijen en hun combinaties, leer de kunst van het maken van basisingrediënten
+      zoals currypasta's en chutneys, en experimenteer met het maken van authentieke naanbrood en biryanischotels.
+    </p>
+    <h2>Populaire Indiase gerechten</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Gerecht</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Boterkip (Chicken Makhani)</td>
+        </tr>
+        <tr>
+          <td>Paneer Tikka Masalae</td>
+        </tr>
+        <tr>
+          <td>Samosa</td>
+        </tr>
+      </tbody>
+      <caption><em>populaire gerechten</em></caption>
+    </table>
+    
+  </div>
+  <!--leaflet-->
+  <div id="map"></div>
+
+  <script>
+   
+    var map = L.map('map').setView([20.5937, 78.9629], 5);
+
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([20.5937, 78.9629]).addTo(map)
+      .bindPopup('India');
+  </script>
+
+  <!-- contact blokje-->
+  <div class="row">
     <aside class="col-md-3 ps-5 contact-aside mx-auto">
-        <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
-        <p>Culinaire reizen <br>
-          email <a href="mailto:mail@ap.be">mail@ap.be</a><br>
-          phone +32 123 / 45 67 89</p>
-        <ul class="list-inline socials">
-          <li class="list-inline-item">
-            <a href="https://www.youtube.com" target="_blank">
-              <i class="bi bi-youtube  fs-3"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.instagram.com" target="_blank">
-              <i class="bi bi-instagram fs-3"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.facebook.com" target="_blank">
-              <i class="bi bi-facebook fs-3 "></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://twitter.com/" target="_blank">
-              <i class="bi bi-twitter  fs-3"></i>
-            </a>
-          </li>
-        </ul>
+      <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
+      <p>Culinaire reizen <br>
+        email <a href="mailto:mail@ap.be">mail@ap.be</a><br>
+        phone +32 123 / 45 67 89</p>
+      <ul class="list-inline socials">
+        <li class="list-inline-item">
+          <a href="https://www.youtube.com" target="_blank">
+            <i class="bi bi-youtube  fs-3"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="bi bi-facebook fs-3 "></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://twitter.com/" target="_blank">
+            <i class="bi bi-twitter  fs-3"></i>
+          </a>
+        </li>
+      </ul>
     </aside>
-</div>
+  </div>
 
 </body>
+
 </html>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
+  <!-- Required meta tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,146 +18,175 @@
   <link href="./css/style.css" rel="stylesheet">
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    
+
   <!-- Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <style>
     #map {
-        height: 500px;
+      height: 500px;
     }
+
     .socials i {
-      color: black; /* Zwart maken */
+      color: black;
+      /* Zwart maken */
     }
-</style>
+  </style>
 </head>
+
 <body>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<!--Naviagatiebalk-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Culinaire Reizen</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-             <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="overzicht.html">Overzicht</a>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Keukens
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="italiaans.html">Italiaanse Keuken</a>
-                            <a class="dropdown-item" href="japans.html">Japanse Keuken</a>
-                            <a class="dropdown-item" href="indiase.html">Indiase Keuken</a>
-                            <a class="dropdown-item" href="mexicaans.html">Mexicaanse Keuken</a>
-                            <a class="dropdown-item" href="thais.html">Thaise Keuken</a>
-                            <a class="dropdown-item" href="frans.html">Franse Keuken</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-            <div class="search-container">
-                <form class="d-flex" role="search">
-                <input type="text" class="form-control search-input" placeholder="Zoek...">
-                <button class="btn btn-outline-light search-btn">Zoek</button>
-            </form>
+  <!--Naviagatiebalk-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Culinaire Reizen</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="overzicht.html">Overzicht</a>
+        </li>
+        <li class="nav-item">
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Keukens
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="italiaans.html">Italiaanse Keuken</a>
+              <a class="dropdown-item" href="japans.html">Japanse Keuken</a>
+              <a class="dropdown-item" href="indiase.html">Indiase Keuken</a>
+              <a class="dropdown-item" href="mexicaans.html">Mexicaanse Keuken</a>
+              <a class="dropdown-item" href="thais.html">Thaise Keuken</a>
+              <a class="dropdown-item" href="frans.html">Franse Keuken</a>
             </div>
-         </div>
-         </nav>
-
-            <div class="container mt-3 mb-3">
-            <h1>Mexicaanse keuken</h1>
-
-            <figure>
-                <img src="../afbeeldingen/Mexicaanse  keuken.jpg" alt="Mexicaanse  keuken" width="250" height="200" mt-3 mb-3>
-                <figcaption><em>Mexicaanse  keuken</em></figcaption>
-            </figure>
-
-
-            <H2>Geschiedenis</H2>
-            <p>
-                De Mexicaanse keuken is doordrenkt van een rijke culturele erfenis die teruggaat tot de tijd van de oude Azteken en Maya's. De invloeden van Spaanse kolonisten hebben geleid tot de vorming van een unieke en levendige keuken met een overvloed aan smaken.
-                    </p>    
-            <h2>Unieke ingredienten</h2>
-            <p>
-                Maïs, bonen, chili's, tomaten en cacao zijn enkele van de basis ingrediënten die een integraal onderdeel vormen van de Mexicaanse keuken. Daarnaast spelen avocado, limoen, koriander en diverse soorten kaas ook een prominente rol in veel traditionele gerechten.
-                        </p>
-                <h2>Kooktechnieken:</h2>
-
-            <p>
-                De Mexicaanse keuken staat bekend om haar complexe bereidingswijzen en intense smaken. Van het roosteren van chili's voor salsa's tot het bereiden van molesaus en het maken van tortilla's, elke stap draagt bij aan de unieke smaakprofielen van de gerechten.
-            </p>
-                
-            <h2>Tips voor thuischefs</h2>
-            <p>
-                Experimenteer met verschillende soorten chili's, leer de kunst van het maken van verse tortilla's, en ontdek de veelzijdigheid van maïs in zowel hartige als zoete gerechten.
-                        </p>
-                <h2>Populaire Thaise gerechten</h2>
-                <ul>
-                    <li>Guacamole</li>
-                    <li>Enchiladas</li>
-                    <li>Churros</li>
-                </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
     </div>
-    <div id="map"></div>
+    <div class="search-container">
+      <form class="d-flex" role="search">
+        <input type="text" class="form-control search-input" placeholder="Zoek...">
+        <button class="btn btn-outline-light search-btn">Zoek</button>
+      </form>
 
-    <script>
-        // Initialize Leaflet map centered on Mexico
-        var map = L.map('map').setView([23.6345, -102.5528], 5);
+    </div>
+  </nav>
+
+  <div class="container mt-3 mb-3">
+    <h1>Mexicaanse keuken</h1>
+
+    <figure>
+      <img src="../afbeeldingen/Mexicaanse  keuken.jpg" alt="Mexicaanse  keuken" width="250" height="200" mt-3 mb-3>
+      <figcaption><em>Mexicaanse keuken</em></figcaption>
+    </figure>
+
+
+    <H2>Geschiedenis</H2>
+    <p>
+      De Mexicaanse keuken is doordrenkt van een rijke culturele erfenis die teruggaat tot de tijd van de oude Azteken
+      en Maya's. De invloeden van Spaanse kolonisten hebben geleid tot de vorming van een unieke en levendige keuken met
+      een overvloed aan smaken.
+    </p>
+    <h2>Unieke ingredienten</h2>
+    <p>
+      Maïs, bonen, chili's, tomaten en cacao zijn enkele van de basis ingrediënten die een integraal onderdeel vormen
+      van de Mexicaanse keuken. Daarnaast spelen avocado, limoen, koriander en diverse soorten kaas ook een prominente
+      rol in veel traditionele gerechten.
+    </p>
+    <h2>Kooktechnieken:</h2>
+
+    <p>
+      De Mexicaanse keuken staat bekend om haar complexe bereidingswijzen en intense smaken. Van het roosteren van
+      chili's voor salsa's tot het bereiden van molesaus en het maken van tortilla's, elke stap draagt bij aan de unieke
+      smaakprofielen van de gerechten.
+    </p>
+
+    <h2>Tips voor thuischefs</h2>
+    <p>
+      Experimenteer met verschillende soorten chili's, leer de kunst van het maken van verse tortilla's, en ontdek de
+      veelzijdigheid van maïs in zowel hartige als zoete gerechten.
+    </p>
+    <h2>Populaire Thaise gerechten</h2>
+    table class="table">
+      <thead>
+        <tr>
+          <th>Gerecht</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Guacamol</td>
+        </tr>
+        <tr>
+          <td>Enchiladas</td>
+        </tr>
+        <tr>
+          <td>Churros</td>
+        </tr>
+      </tbody>
+      <caption><em>populaire gerechten</em></caption>
+    </table>
     
-        // Add a tile layer (OpenStreetMap)
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-    
-        // Add a marker for Mexico
-        L.marker([23.6345, -102.5528]).addTo(map)
-            .bindPopup('Mexico');
-    </script>
-    <!-- contact blokje-->
-<div class="row">
+  </div>
+  <!--leaflet-->
+  <div id="map"></div>
+
+  <script>
+
+    var map = L.map('map').setView([23.6345, -102.5528], 5);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+
+    L.marker([23.6345, -102.5528]).addTo(map)
+      .bindPopup('Mexico');
+  </script>
+  <!-- contact blokje-->
+  <div class="row">
     <aside class="col-md-3 ps-5 contact-aside mx-auto">
-        <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
-        <p>Culinaire reizen <br>
-          email <a href="mailto:mail@ap.be">mail@ap.be</a><br>
-          phone +32 123 / 45 67 89</p>
-        <ul class="list-inline socials">
-          <li class="list-inline-item">
-            <a href="https://www.youtube.com" target="_blank">
-              <i class="bi bi-youtube  fs-3"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.instagram.com" target="_blank">
-              <i class="bi bi-instagram fs-3"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.facebook.com" target="_blank">
-              <i class="bi bi-facebook fs-3 "></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://twitter.com/" target="_blank">
-              <i class="bi bi-twitter  fs-3"></i>
-            </a>
-          </li>
-        </ul>
+      <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
+      <p>Culinaire reizen <br>
+        email <a href="mailto:mail@ap.be">mail@ap.be</a><br>
+        phone +32 123 / 45 67 89</p>
+      <ul class="list-inline socials">
+        <li class="list-inline-item">
+          <a href="https://www.youtube.com" target="_blank">
+            <i class="bi bi-youtube  fs-3"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="bi bi-facebook fs-3 "></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://twitter.com/" target="_blank">
+            <i class="bi bi-twitter  fs-3"></i>
+          </a>
+        </li>
+      </ul>
     </aside>
-</div>
+  </div>
 
 
 </body>
+
 </html>
