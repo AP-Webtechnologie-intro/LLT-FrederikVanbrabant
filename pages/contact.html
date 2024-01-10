@@ -18,6 +18,12 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!--leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" ntegrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 </head>
 <body>
 <!--Naviagatiebalk-->
@@ -89,6 +95,22 @@
   
     </form>
   </div>
+  <div class="mt-5 ml-5 mr-5 " id="map" style="height: 300px"></div>
+
+    <script>
+        // Initialize Leaflet map
+        var map = L.map('map').setView([51.229950, 4.415877], 15);
+
+        // Add a tile layer (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // marker toevoegen AP Hogeschool  Ellermanstraat
+        L.marker([51.229950, 4.415877]).addTo(map)
+            .bindPopup('AP Hogeschool<br>Ellermanstraat')
+            .openPopup();
+    </script> 
 
 
 </body>
