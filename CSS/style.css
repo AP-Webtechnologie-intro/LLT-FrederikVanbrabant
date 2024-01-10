@@ -31,3 +31,6 @@ html, body {
 .search-btn {
     padding: 8px 15px;
 }
+.socials a i, p a  {
+  color: #000000; /* Black color code */
+}
